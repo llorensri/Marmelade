@@ -1,14 +1,172 @@
-ID,DIALOGUE_TEXT
-01_KOA_SAD_SEQ_01,I... I think we lost them...
-01_PAN_ANG_SEQ_01,We should... We should keep moving.
-01_PAN_FE_SEQ_02,If they find us...
-01_LIN_ANG_SEQ_01,We won't come back there.
-01_LIN_NEU_SEQ_02,But let's get a rest. You all are exhausted.
-01_TUC_SUR_SEQ_01,Why... Why aren't you so tired...?
-01_CHA_DIS_SEQ_01,"Foolish question.. He's a predator, that's why..."
-02_PRO_NEU_DTR_01,... [stay silent]
-02_PRO_NEU_DTR_02,Hello?
-02_PRO_FEA_DTR_03,"Please, don't hurt me!"
-04_KOA_ANG_SEQ_30,Think about it.
-04_KOA_ANG_SEQ_31,"I try to be nice, but if you continue like this, I will stop."
-04_KOA_NEU_SEQ_32,"Hey, calm down a bit, will you?"
+ID	DIALOGUE_TEXT
+01_KOA_SAD_SEQ_01	I... I think we lost them...
+01_PAN_ANG_SEQ_01	We should... We should keep moving.
+01_PAN_FE_SEQ_02	If they find us...
+01_LIN_ANG_SEQ_01	We won't come back there.
+01_LIN_NEU_SEQ_02	But let's get a rest. You all are exhausted.
+01_TUC_SUR_SEQ_01	Why... Why aren't you so tired...?
+01_CHA_DIS_SEQ_01	Foolish question.. He's a predator, that's why...
+01_TUC_CON_SEQ_02	Lucky guy...
+01_KOA_SAD_SEQ_02	So... what we do now?
+01_TUC_NEU_SEQ_03	Those humans from the zoo are still looking for us...
+01_TUC_NEU_SEQ_04	We can't stay here.
+01_CHA_NEU_SEQ_02	Agreed. We have to move.
+01_PAN_NEU_SEQ_03	Let's go to the mountains, we can hide there!
+01_LIN_NEU_SEQ_03	You fool, there is the first place they're gonna look after us!
+01_CHA_CON_SEQ_03	Oh, so you have a better idea, mister meat-eating?
+01_LIN_NEU_SEQ_04	Does my diet matter something here, lizard?
+01_TUC_HAP_SEQ_05	Wohoo, fight, fight, fight!
+01_KOA_SAD_SEQ_03	Please, don't start fighting... we have to work togeth--
+01_PAN_ANG_SEQ_04	Shut up, weakling! Just stay out of this!
+01_KOA_SAD_SEQ_04	B-But...
+01_CHI_SAD_SEQ_01	W-Waaaah!
+01_PAN_ANG_SEQ_05	For bamboo's sake... keep your kid quiet!
+01_PAN_FEA_SEQ_06	They are going to hear us, you dumb marsupial!
+01_KOA_SAD_SEQ_05	I-I'm sorry...! Shh, shh, please, stay quiet sweety...
+01_CHI_SAD_SEQ_02	S-Sniff...
+01_CHA_DIS_SEQ_04	Jeez, it would have been better not bringing the baby with us...
+01_KOA_ANG_SEQ_06	Don't you DARE saying that again, you cold lizard!
+01_PAN_FEA_SEQ_07	A HUMAN! MAYDAY, MAYDAY!
+01_CHA_CON_SEQ_05	Damn... our luck only gets worse...
+01_TUC_SUR_SEQ_06	We have to run! Escape, escape!
+01_PAN_FEA_SEQ_08	NO! IF IT RANS AWAY, IT WILL TELL THEM WHERE WE ARE!
+01_PAN_ANG_SEQ_09	LET'S HUNT THE HUMAN!
+01_KOA_SUR_SEQ_07	A-Are you even listening to yourselves?
+01_LIN_ANG_SEQ_05	... *Growls*
+02_PRO_NEU_DTR_01	... [stay silent]
+02_PRO_NEU_DTR_02	Hello?
+02_PRO_FEA_DTR_03	Please, don't hurt me!
+02_PAN_ANG_SEQ_01	Don't talk, human! We know your intentions!
+02_PAN_ANG_SEQ_02	No one will fool us again!
+02_LIN_NEU_SEQ_01	Maybe you should calm down first, Panda.
+02_TUC_CON_SEQ_01	Yeah, there's no point in screaming and scaring the human.
+02_CHA_DIS_SEQ_01	I don't want that fleeing and warning others of its own.
+02_KOA_SAD_SEQ_01	Please, stop fighting... let's talk...
+02_TUC_SUR_SEQ_02	Woah, woah! Relax, human!
+02_KOA_NEU_SEQ_02	No one is going to hurt you, kiddo.
+02_PAN_ANG_SEQ_03	Speak for yourselves, traitors.
+02_PAN_ANG_SEQ_04	No human can be trusted. He's a threat!
+02_PRO_SAD_DTR_04	Why are you fighting?
+02_PRO_FEA_DTR_05	You are scaring me...
+02_PRO_ANG_DTR_06	Hey, I'm a good kid!
+02_PRO_SAD_DTR_07	Why are you mad at me?
+02_PAN_ANG_SEQ_05	Because all of your type are slavers and barbarians!
+02_KOA_ANG_SEQ_03	Panda! Just shut up, it's just a kid!
+02_PAN_ANG_SEQ_06	Yeah, the worst kind of human!
+02_PAN_ANG_SEQ_07	We have to get rid of it right now!
+02_CHA_DIS_SEQ_02	Weird assumption coming from one of the species that had us as their slaves.
+02_TUC_SUR_SEQ_03	But it's kinda funny, he looks... too small?
+02_KOA_ANG_SEQ_04	Because it's a child, you rude people!
+02_PAN_ANG_SEQ_08	FOR THE BAMBOO'S SAKE, FOCUS ON THE MAIN POINT!
+02_PAN_FEA_SEQ_09	HE'S A THREAT, A BARBARIAN!
+02_PAN_ANG_SEQ_10	WE HAVE TO GET RID OF IT!
+02_LIN_NEU_SEQ_02	*sigh* Dude, just shut up, please.
+02_PRO_ANG_DTR_08	You are being very rude...
+02_PRO_SAD_DTR_09	Believe me, I don't want problems...
+02_PAN_ANG_SEQ_11	See? No words! I was right about it's guilt!
+02_CHA_NEU_SEQ_03	I think you are just being too abrassive.
+02_CHA_CON_SEQ_04	The human can't even talk with so much blabbering of yours.
+02_TUC_NEU_SEQ_04	Hey, human! Answer something!
+02_TUC_CON_SEQ_05	Are you going to be a threat to us?
+02_PAN_ANG_SEQ_99	See!?
+02_CHA_DIS_SEQ_99	Huh, sketchy.
+02_TUC_CON_SEQ_99	Yyyyeh human, at least give us something to work.
+02_PAN_ANG_SEQ_12	We can't trust humans! Specialy little demons like you!
+02_KOA_ANG_SEQ_05	Panda, that's enough. The kid is clearly no threat to us.
+02_LIN_ANG_SEQ_03	Yeah. Just shut up already.
+02_PAN_FEA_SEQ_13	B-But...!
+02_CHA_NEU_SEQ_05	Before anyone decides anything, there is something I want to know.
+02_CHA_NEU_SEQ_06	What are you doing here, if you aren't spying on us?
+02_PRO_SAD_DTR_10	I just got lost...
+02_PRO_ANG_DTR_11	I don't have to answer you!
+02_PAN_ANG_SEQ_14	EXCUSE ME!?
+02_CHA_DIS_SEQ_07	Hah, a little cheeky, don't you?
+02_TUC_NEU_SEQ_06	Well, the human just pointed the facts.
+02_TUC_SUR_SEQ_07	Becausen you are being rude.
+02_PRO_FEA_DTR_12	I'm sorry, I'm scared!
+02_PRO_ANG_DTR_13	Yeah. Tucan is right!
+02_KOA_SAD_SEQ_06	Oh, poor kid...
+02_KOA_HAP_SEQ_07	Don't worry. Nothing is going to happen.
+02_LIN_NEU_SEQ_04	Well, first control the paranoid racoon here.
+02_LIN_NEU_SEQ_05	He looks like a volcano about to explode.
+02_PAN_ANG_SEQ_15	HEY!
+02_TUC_CON_SEQ_08	I didn't need your agreement, human.
+02_TUC_HAP_SEQ_09	But thanks!
+02_LIN_CON_SEQ_06	That's all we need, someone telling the tucan he was right...
+02_TUC_SUR_SEQ_10	Hey! what do you mean by that, huh!?
+02_PRO_NEU_DTR_14	... [remain silent]
+02_PRO_ANG_DTR_15	Nope, not saying to you!
+02_PAN_ANG_SEQ_16	This is riddiculous!
+02_CHA_CON_SEQ_08	Agreed. But I didn't expect too much from it to be honest.
+02_TUC_NEU_SEQ_11	You both are just morons, right?
+02_PAN_ANG_SEQ_17	EXCUSE ME!?
+02_CHA_NEU_SEQ_09	...
+02_KOA_NEU_SEQ_08	- [KOALA] H-Hello...?
+02_PAN_ANG_SEQ_18	- [PANDA] Why are you saluting the human!?
+02_KOA_SUR_SEQ_09	- [KOALA] I-I don't know... Education...?
+02_PAN_ANG_SEQ_19	- [PANDA] But it's a H U M A N!
+02_LIN_CON_SEQ_07	- [LINX] Yeah, we have eyes to see it, genious.
+02_CHA_DIS_SEQ_10	- [CHAMELEON] Sarcasm doesn't fit you well, sweetheart.
+02_TUC_HAP_SEQ_12	- [TUCAN] Ouch, Chamie 1, Linx 0.
+02_LIN_CON_SEQ_08	- [LINX] I don't like any of you, except from the Koala guy.
+02_CHA_CON_SEQ_11	- [CHAMELEON] Well, at least we share something in common then.
+02_PAN_ANG_SEQ_20	- [PANDA] GUYS, THERE'S A HUMAN THERE!
+02_PAN_NEU_SEQ_21	- [PANDA] Can you, I don't know...
+02_PAN_ANG_SEQ_22	- [PANDA] PAY ATTENTION FOR ONCE AT LEAST!?
+02_TUC_CON_SEQ_13	- [TUCAN] Hey bro, chill. The kid is not moving.
+02_TUC_NEU_SEQ_14	- [TUCAN] Maybe it's dead or something.
+02_KOA_SUR_SEQ_10	- [KOALA] Don't make that kind of jokes, for eucalyptus sake!
+02_TUC_HAP_SEQ_15	- [TUCAN] Why~? We have a human lover here~?
+02_KOA_SUR_SEQ_11	- [KOALA] D-Don't be silly!
+02_CHA_CON_SEQ_12	- [CHAMELEON] Huh... is he being silly, or just accurate?
+02_LIN_CON_SEQ_09	- [LINX] Hey, let him alone. He did nothing to you.
+02_CHA_DIS_SEQ_13	- [CHAMELEON] Now defending the human lover? You, the meat-eater?
+02_LIN_CON_SEQ_10	- [LINX] Don't push it, lizard.
+02_CHA_DIS_SEQ_14	- [CHAMELEON] Or what are you going to do?
+02_CHA_DIS_SEQ_15	- [CHAMELEON] Eat me, maybe? Hunt me?
+02_LIN_ANG_SEQ_11	- [LINX] You are pissing me--
+02_KOA_ANG_SEQ_12	- [KOALA] PLEASE, STOP, ALL OF YOU!
+02_CHA_CON_SEQ_16	- [CHAMELEON] Tsk...
+02_TUC_NEU_SEQ_16	...
+02_TUC_NEU_SEQ_17	Not very talkative, don'tcha?
+03_CHA_CON_SEQ_01	However... let's stop wasting time fighting.
+03_CHA_NEU_SEQ_02	Threat or not, we are now in a dead point.
+03_LIN_NEU_SEQ_01	So... what do we do now?
+03_KOA_NEU_SEQ_01	It's already very dark, and the child doesn't seem dangerous.
+03_KOA_SAD_SEQ_02	Maybe we should rest...
+03_LIN_NEU_SEQ_02	Yeah. Fighting won't solve anything.
+03_TUC_NEU_SEQ_01	But... what about the human?
+03_TUC_SUR_SEQ_02	We can't just... keep it here.
+03_PRO_HAP_DTR_01	I'll be good!
+03_PRO_NEU_DTR_02	I'm leaving.
+03_KOA_SUR_SEQ_03	But we can't just throw the kid into the forest!
+03_KOA_SUR_SEQ_04	Could be dangerous!
+03_PAN_DIS_SEQ_01	...Aaand? I particulary don't care if it get's hurt or something.
+03_TUC_CON_SEQ_03	What a friendly guy.
+03_LIN_NEU_SEQ_03	*sigh* Just keep an eye on him. We'll see tomorrow.
+03_PAN_ANG_SEQ_02	You CAN'T be serious!
+03_CHA_DIS_SEQ_03	Panda, shut up. It's pointless.
+03_PAN_ANG_SEQ_03	You all are desillusional!
+03_PAN_FEA_SEQ_04	We will regret this!
+03_LIN_NEU_SEQ_04	...
+03_LIN_NEU_SEQ_05	Fine. The kid stays.
+03_KOA_HAP_SEQ_05	Thanks God...
+03_CHA_CON_SEQ_20	But just for this night. We don't trust you yet.
+03_TUC_NEU_SEQ_04	Yup. Not a single bit.
+03_PAN_ANG_SEQ_05	...
+03_PAN_FEA_SEQ_06	You all will regret this. Remember my words.
+03_KOA_SUR_SEQ_06	What, wait! No!
+03_LIN_CON_SEQ_06	You can't be serious...
+03_PAN_FEA_SEQ_07	I TOLD YOU! HE'S GOING TO SELL US TO THE HUMANS!
+03_TUC_CON_SEQ_05	Eh, maybe you are overreacting, Panda.
+03_TUC_CON_SEQ_06	But yeah, kiddo, you can't go back.
+03_CHA_DIS_SEQ_04	We don't trust you. So, we can't let you go just like that.
+03_CHA_CON_SEQ_05	Not yet at least.
+03_KOA_SAD_SEQ_07	Come on guys...
+03_KOA_HAP_SEQ_08	Hey, little child. Just stay here this night.
+03_KOA_SAD_SEQ_09	It's dangerous outside in the woods.
+03_KOA_HAP_SEQ_10	Tomorrow we'll see what to do, right?
+03_KOA_NEU_SEQ_11	Don't be afraid, I won't allow them to touch you.
+03_LIN_CON_SEQ_07	*murmuring* As if you could...
+03_LIN_NEU_SEQ_08	Well... it seems to be decided.
+03_LIN_NEU_SEQ_09	The human stays whatever it wants or not.

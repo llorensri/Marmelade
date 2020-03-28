@@ -35,6 +35,7 @@ public class CSVParser : MonoBehaviour
     private void Awake()
     {
         TextAsset csv = (TextAsset)Resources.Load(csv_name);
+        print(csv.text);
         data = csv.text.Split('\n');
     }
 
@@ -44,7 +45,7 @@ public class CSVParser : MonoBehaviour
         foreach(string c in data)
         {
             //TODO FIX COMMA
-            string[] split = c.Split(',');
+            string[] split = c.Split('\t');
             if(code == split[0])
             {
                 to_ret.FillID(split[0], split[1]);
