@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FaceManager : MonoBehaviour
 {
+    public float offset = 1.0f;
     public void SetFace(string c)
     {
         int i = 0;
@@ -39,7 +40,7 @@ public class FaceManager : MonoBehaviour
         {
             i = 7;
         }
-        transform.Find("Face").transform.position = new Vector3(-i,0,0);
+        transform.Find("Face").transform.position = new Vector3(-(i* offset),0,0);
     }
 
 }

@@ -10,10 +10,13 @@ public class AlwaysFollowCharacter : MonoBehaviour
     void Start()
     {
         actuallyFollowing = GetComponent<Cinemachine.CinemachineTargetGroup>();
-        actuallyFollowing.AddMember(GameObject.Find("Character").transform, 2, 1);
+        actuallyFollowing.AddMember(GameObject.Find("Character").transform, 2, 4.5f);
     }
-
-   public void Add(Transform obj)
+    private void OnEnable()
+    {
+        CharacterController2D.block_input = false;
+    }
+    public void Add(Transform obj)
     {
         if(actuallyFollowing.FindMember(obj)==-1)
             actuallyFollowing.AddMember(obj, .75f, 4);
@@ -21,6 +24,6 @@ public class AlwaysFollowCharacter : MonoBehaviour
 
     public void Remove() {
         Array.Clear(actuallyFollowing.m_Targets, 0, actuallyFollowing.m_Targets.Length);
-        actuallyFollowing.AddMember(GameObject.Find("Character").transform, 2, 1);
+        actuallyFollowing.AddMember(GameObject.Find("Character").transform, 2, 3);
     }
 }
