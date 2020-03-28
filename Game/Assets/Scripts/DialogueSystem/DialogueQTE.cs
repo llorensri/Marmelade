@@ -70,6 +70,7 @@ public class DialogueQTE : DialogueBase
             print("DIALOGUE QTE ERROR: NO DIALOGUE SELECTED");
         }
     }
+
     public override void Action(DialogueChain chain)
     {
         if (Initialize(chain))
@@ -100,6 +101,7 @@ public class DialogueQTE : DialogueBase
                 _GUITextSecond.text = "";
                 _GUITextThird.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(First.entry.Inflection);
+                GameManagerScript.Instance.karma += First.karma_counter;
             }
             else if ((Second != null) && Input.GetKeyDown(KeyCode.X))
             {
@@ -108,7 +110,7 @@ public class DialogueQTE : DialogueBase
                 _GUITextThird.text = "";
                 _GUITextFirst.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Second.entry.Inflection);
-
+                GameManagerScript.Instance.karma += First.karma_counter;
             }
             else if ((Third != null) && Input.GetKeyDown(KeyCode.C))
             {
@@ -117,7 +119,7 @@ public class DialogueQTE : DialogueBase
                 _GUITextSecond.text = "";
                 _GUITextFirst.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Third.entry.Inflection);
-
+                GameManagerScript.Instance.karma += First.karma_counter;
             }
 
             if (_actionPressed)

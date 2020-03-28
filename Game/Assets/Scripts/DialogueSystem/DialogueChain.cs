@@ -15,6 +15,8 @@ public class DialogueData
 
     [Header("Keys")]
     public string key_;
+    [Range(-1, 1)]
+    public int karma_counter = 0;
     public TypeType typeStyle;
     [Range(.005f, .5f)]
     public float typeSpeed = .03f;
