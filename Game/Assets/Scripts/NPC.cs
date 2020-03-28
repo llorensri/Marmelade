@@ -11,15 +11,19 @@ public class NPC : MonoBehaviour
 
     void Action()
     {
-        FindObjectOfType<StorytellerDialogue>().chain = (DialogueChain)GetComponent<RefHandler>().handler[0];
+        if (GetComponent<RefHandler>().handler[0] != null)
+        {
+            FindObjectOfType<StorytellerDialogue>().chain = (DialogueChain)GetComponent<RefHandler>().handler[0];
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.layer == LayerMask.NameToLayer("Character")) { 
-        transform.GetChild(0).gameObject.SetActive(true);
-        Action();
-        FindObjectOfType<CharacterController2D>().eventToTrigger = onAction;
+        if (col.gameObject.layer == LayerMask.NameToLayer("Character"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            Action();
+            FindObjectOfType<CharacterController2D>().eventToTrigger = onAction;
         }
     }
 

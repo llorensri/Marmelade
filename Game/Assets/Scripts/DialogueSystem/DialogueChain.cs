@@ -32,6 +32,9 @@ public class DialogueData
 
     void PrepareBubble(GameObject text, GameObject referenceWorld, Vector3 offset)
     {
+        AlwaysFollowCharacter reference= Object.FindObjectOfType<AlwaysFollowCharacter>();
+        reference.Add(referenceWorld.transform);
+        
         //TODO: THIS
 
     }

@@ -13,7 +13,7 @@ public abstract class DialogueBase : MonoBehaviour
     public virtual bool Initialize(DialogueChain chain) { print("I should not be executing!"); return false; }
 
     public abstract void Action();
-    public virtual void Action(DialogueChain chain) { print("I should not be executing!"); }
+    public virtual void Action(DialogueChain chain) {  }
 
     protected int _index = 0;
     protected bool _initialized = false;
