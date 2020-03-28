@@ -28,17 +28,29 @@ public class DialogueData
 
     private bool _isWriting;
     public bool IsWriting { get { return _isWriting; } }
+    public Entry entry;
 
-    public bool ReadFromCSV()
+    void PrepareBubble(GameObject text, GameObject referenceWorld, Vector3 offset)
     {
-        text= CSVParser.GetKey(key_).Text;
+        //TODO: THIS
 
+    }
+
+    //PARSE ALL DATA FROM CSV NOT ONLY TEXT
+    public bool ParseData(GameObject obj)
+    {
+        entry = CSVParser.GetKey(key_);
+        text = entry.Text;
+
+        PrepareBubble(obj, GameObject.FindGameObjectWithTag(entry.Animal), new Vector3(0, 30, 0));
+        
         return true;
     }
 
     public IEnumerator Type(TextMeshProUGUI _GUIText)
     {
-        ReadFromCSV();
+
+        ParseData(_GUIText.gameObject);
         _isWriting = true;
         _GUIText.SetText("");
         switch (typeStyle)

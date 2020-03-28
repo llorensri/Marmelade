@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,20 +14,13 @@ public class DialogueQTE : DialogueBase
     private DialogueData Third;
     private TextMeshProUGUI _GUITextFirst, _GUITextSecond, _GUITextThird;
     GameObject DialogueRef;
+    public float decisionSeconds = 1.5f;
 
     private bool _actionPressed = false;
-#if (_DEBUG)
-    private void Start()
+
+    public override bool Initialize(DialogueChain data)
     {
-        Initialize();
-        Action();
-    }
-#endif
 
-
-
-    protected override bool Initialize(DialogueChain data)
-    {
         if (data.data.Count < 1)
         {
             return false;
@@ -53,6 +47,7 @@ public class DialogueQTE : DialogueBase
             _GUITextSecond.text = "";
             _GUITextThird.text = "";
             _actionPressed = false;
+            CharacterController2D.block_input = true;
 
             _initialized = true;
             return true;
@@ -102,28 +97,48 @@ public class DialogueQTE : DialogueBase
             {
                 First.post_execution_event.Invoke();
                 _actionPressed = true;
+                _GUITextSecond.text = "";
+                _GUITextThird.text = "";
+                GameObject.Find("Character").GetComponent<FaceManager>().SetFace(First.entry.Inflection);
             }
             else if ((Second != null) && Input.GetKeyDown(KeyCode.X))
             {
                 Second.post_execution_event.Invoke();
                 _actionPressed = true;
+                _GUITextThird.text = "";
+                _GUITextFirst.text = "";
+                GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Second.entry.Inflection);
 
             }
             else if ((Third != null) && Input.GetKeyDown(KeyCode.C))
             {
                 Third.post_execution_event.Invoke();
                 _actionPressed = true;
+                _GUITextSecond.text = "";
+                _GUITextFirst.text = "";
+                GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Third.entry.Inflection);
 
             }
 
             if (_actionPressed)
             {
-                //TODO: HIDE/SHOW TEXT IN A BETTER WAY
-                DialogueRef.SetActive(false);
-                //TODO: DOTween to Zoom in when a Dialogue starts ends
-                //TODO: Block Unblock Movement when commenting
-                _initialized = false;
+                StartCoroutine(waitResponse());
             }
         }
+    }
+
+    public IEnumerator waitResponse()
+    {
+        yield return new WaitForSeconds(decisionSeconds);
+        CharacterController2D.block_input = false;
+        //TODO: HIDE/SHOW TEXT IN A BETTER WAY
+        foreach(Transform t in DialogueRef.transform)
+        {
+            t.GetComponent<TextMeshProUGUI>().text = "";
+        }
+        //TODO: DOTween to Zoom in when a Dialogue starts ends
+        //TODO: Block Unblock Movement when commenting
+        _initialized = false;
+
     }
 }

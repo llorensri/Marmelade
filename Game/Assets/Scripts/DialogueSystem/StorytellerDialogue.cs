@@ -1,50 +1,42 @@
-﻿#define _DEBUG
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
 using TMPro;
 public class StorytellerDialogue : DialogueBase
 {
-    private TextMeshProUGUI _GUIText;
-
-#if(_DEBUG)
-    private void Start()
+    public override bool Initialize(DialogueChain data)
     {
-        Action();
-    }
-#endif
 
- 
-    protected override bool Initialize(DialogueChain data)
-    {
-        chain = data;
-        try
+        if (data)
         {
+            CharacterController2D.block_input = true;
+
+            chain = data;
             _GUIText = GetComponent<TextMeshProUGUI>();
             _initialized = true;
             return true;
-        }
-        catch (Exception e)
+        }else
         {
-            print("STORYTELLER DIALOGUE COMPONENT NOT FOUND: " + e.ToString());
+            print("CHAIN DATA IS NULL" +
+                ": ");
             return false;
         }
     }
 
     public override void Action()
     {
-        if (chain != null) { 
-        if (Initialize(chain))
+
+        if (chain != null)
         {
-            _index = 0;
-            chain.data[_index].pre_execution_event.Invoke();
-            StartCoroutine(chain.data[_index].Type(_GUIText));
+            if (Initialize(chain))
+            {
+                _index = 0;
+                chain.data[_index].pre_execution_event.Invoke();
+                StartCoroutine(chain.data[_index].Type(_GUIText));
+            }
         }
-        }
-        else { print("DATA IS NULL");  }
+        else { print("DATA IS NULL"); }
     }
     public override void Action(DialogueChain data)
     {
@@ -68,6 +60,7 @@ public class StorytellerDialogue : DialogueBase
             {
                 _initialized = false;
                 _GUIText.SetText("");
+                CharacterController2D.block_input = false;
             }
             else
             {

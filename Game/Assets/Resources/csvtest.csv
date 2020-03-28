@@ -5,4 +5,10 @@ ID,DIALOGUE_TEXT
 01_LIN_ANG_SEQ_01,We won't come back there.
 01_LIN_NEU_SEQ_02,But let's get a rest. You all are exhausted.
 01_TUC_SUR_SEQ_01,Why... Why aren't you so tired...?
-01_CHA_DIS_EQ_01,"Foolish question.. He's a predator, that's why..."
+01_CHA_DIS_SEQ_01,"Foolish question.. He's a predator, that's why..."
+02_PRO_NEU_DTR_01,... [stay silent]
+02_PRO_NEU_DTR_02,Hello?
+02_PRO_FEA_DTR_03,"Please, don't hurt me!"
+04_KOA_ANG_SEQ_30,Think about it.
+04_KOA_ANG_SEQ_31,"I try to be nice, but if you continue like this, I will stop."
+04_KOA_NEU_SEQ_32,"Hey, calm down a bit, will you?"

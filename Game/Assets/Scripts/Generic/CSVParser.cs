@@ -32,7 +32,7 @@ public class CSVParser : MonoBehaviour
 {
     public string csv_name;
     private static string[] data;
-    private void Start()
+    private void Awake()
     {
         TextAsset csv = (TextAsset)Resources.Load(csv_name);
         data = csv.text.Split('\n');
