@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
-public class StorytellerDialogue : DialogueBase
+public class DialogueEvaluation : DialogueBase
 {
+    public int karma_good, karma_bad;
+
     public override bool Initialize(DialogueChain data)
     {
 
@@ -24,38 +26,38 @@ public class StorytellerDialogue : DialogueBase
             return false;
         }
     }
-
-    public override void Action()
+    private DialogueChain Evaluate()
     {
-
-        if (chain != null)
+        RefHandler handler = GetComponent<RefHandler>();
+        if (GameManagerScript.Instance.karma >= karma_good)
         {
-            if (Initialize(chain))
-            {
-                _index = 0;
-                chain.data[_index].pre_execution_event.Invoke();
-                StartCoroutine(chain.data[_index].Type(_GUIText));
-            }
-        }
-        else { print("DATA IS NULL"); }
-    }
-    public override void Action(DialogueChain data)
-    {
-        if (!_initialized)
+            return (DialogueChain)handler.handler[0];
+        }else if (GameManagerScript.Instance.karma <= karma_bad)
         {
-            if (Initialize(data))
-            {
-                _index = 0;
-                chain.data[_index].pre_execution_event.Invoke();
-                StartCoroutine(chain.data[_index].Type(_GUIText));
-            }
+            return (DialogueChain)handler.handler[1];
         }
         else
         {
-            print("HEY BOY, STILL HERE, GIMME TIME!");
+            return (DialogueChain)handler.handler[2];
         }
     }
-
+    public override void Action()
+    {
+        if (!_initialized)
+        {
+            
+            if (chain != null)
+            {
+                if (Initialize(Evaluate()))
+                {
+                    _index = 0;
+                    chain.data[_index].pre_execution_event.Invoke();
+                    StartCoroutine(chain.data[_index].Type(_GUIText));
+                }
+            }
+            else { print("DATA IS NULL"); }
+        }
+    }
 
     private void Update()
     {
