@@ -166,5 +166,3 @@ public class DialogueChain : MonoBehaviour
 {
     public List<DialogueData> data = new List<DialogueData>();
 }
-
-

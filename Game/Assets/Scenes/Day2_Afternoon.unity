@@ -720,6 +720,7 @@ GameObject:
   - component: {fileID: 318402032}
   - component: {fileID: 318402031}
   - component: {fileID: 318402027}
+  - component: {fileID: 318402026}
   - component: {fileID: 318402025}
   - component: {fileID: 318402033}
   - component: {fileID: 318402034}
@@ -756,6 +757,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8783193, y: 1.923431}
   m_EdgeRadius: 0
+--- !u!114 &318402026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318402024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407895422bd870744979ebf36c053150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karma_good: {fileID: 0}
+  karma_bad: {fileID: 0}
+  karma_neu: {fileID: 0}
+  karma_min_good: 4
+  karma_min_bad: -4
 --- !u!114 &318402027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,6 +1934,7 @@ GameObject:
   - component: {fileID: 710466291}
   - component: {fileID: 710466290}
   - component: {fileID: 710466286}
+  - component: {fileID: 710466285}
   - component: {fileID: 710466284}
   - component: {fileID: 710466292}
   - component: {fileID: 710466293}
@@ -1952,6 +1971,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8783193, y: 1.923431}
   m_EdgeRadius: 0
+--- !u!114 &710466285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710466283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407895422bd870744979ebf36c053150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karma_good: {fileID: 0}
+  karma_bad: {fileID: 0}
+  karma_neu: {fileID: 0}
+  karma_min_good: 4
+  karma_min_bad: -4
 --- !u!114 &710466286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,6 +2450,7 @@ GameObject:
   - component: {fileID: 922175143}
   - component: {fileID: 922175142}
   - component: {fileID: 922175138}
+  - component: {fileID: 922175137}
   - component: {fileID: 922175136}
   - component: {fileID: 922175144}
   - component: {fileID: 922175145}
@@ -2450,6 +2487,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8783193, y: 1.923431}
   m_EdgeRadius: 0
+--- !u!114 &922175137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922175135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407895422bd870744979ebf36c053150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karma_good: {fileID: 0}
+  karma_bad: {fileID: 0}
+  karma_neu: {fileID: 0}
+  karma_min_good: 4
+  karma_min_bad: -4
 --- !u!114 &922175138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2907,7 +2961,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1326912133}
   - component: {fileID: 1326912132}
-  - component: {fileID: 1326912134}
   m_Layer: 0
   m_Name: Toucan_S01
   m_TagString: Untagged
@@ -2971,7 +3024,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1326912134}
+        - m_Target: {fileID: 0}
           m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
@@ -3007,33 +3060,6 @@ Transform:
   m_Father: {fileID: 4759248663705832220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1326912134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326912131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fde4cc53ab6a7d4b87646df47ba40e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seconds: 0.2
-  ToTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1597955713}
-        m_MethodName: Action
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1597955707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3424,6 +3450,7 @@ GameObject:
   - component: {fileID: 1799021831}
   - component: {fileID: 1799021830}
   - component: {fileID: 1799021826}
+  - component: {fileID: 1799021825}
   - component: {fileID: 1799021824}
   - component: {fileID: 1799021832}
   - component: {fileID: 1799021833}
@@ -3460,6 +3487,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8783193, y: 1.923431}
   m_EdgeRadius: 0
+--- !u!114 &1799021825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799021823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407895422bd870744979ebf36c053150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karma_good: {fileID: 0}
+  karma_bad: {fileID: 0}
+  karma_neu: {fileID: 0}
+  karma_min_good: 4
+  karma_min_bad: -4
 --- !u!114 &1799021826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3915,6 +3959,7 @@ GameObject:
   - component: {fileID: 1958650243}
   - component: {fileID: 1958650242}
   - component: {fileID: 1958650238}
+  - component: {fileID: 1958650237}
   - component: {fileID: 1958650236}
   - component: {fileID: 1958650235}
   - component: {fileID: 1958650244}
@@ -3965,6 +4010,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8783193, y: 1.923431}
   m_EdgeRadius: 0
+--- !u!114 &1958650237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958650234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407895422bd870744979ebf36c053150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karma_good: {fileID: 0}
+  karma_bad: {fileID: 0}
+  karma_neu: {fileID: 0}
+  karma_min_good: 4
+  karma_min_bad: -4
 --- !u!114 &1958650238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6119,7 +6181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ce028ba6d2e4049b25d51c845da3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  csv_name: csvtest
+  csv_name: CSVDay2
 --- !u!4 &4759248663705832220
 Transform:
   m_ObjectHideFlags: 0
