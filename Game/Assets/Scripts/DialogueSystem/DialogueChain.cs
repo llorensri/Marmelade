@@ -87,8 +87,11 @@ public class DialogueData
                 GameObject.Find(entry.Animal).transform.GetChild(0).gameObject.SetActive(false);
             }
 
+            Debug.Log("VARS ARE" + text.name + " " + referenceWorld.name);
+            Debug.Log("VARS ARE" + Camera.main.WorldToScreenPoint(referenceWorld.transform.position));
+            Object.FindObjectOfType<PlaceUIElementAtWorld>().MoveToClickPoint(referenceWorld.transform.position + offset);
         }
-        
+
     }
 
     //PARSE ALL DATA FROM CSV NOT ONLY TEXT
@@ -97,7 +100,7 @@ public class DialogueData
         entry = CSVParser.GetKey(key_);
         text = entry.Text;
 
-        PrepareBubble(obj, GameObject.FindGameObjectWithTag(entry.Animal), new Vector3(0, 30, 0));
+        PrepareBubble(obj, GameObject.FindGameObjectWithTag(entry.Animal), new Vector3(0, 3.6f, 0));
 
         return true;
     }

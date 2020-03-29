@@ -6,6 +6,10 @@ using TMPro;
 using UnityEngine.UI;
 public class StorytellerDialogue : DialogueBase
 {
+    public void Awake()
+    {
+        GetComponent<RectTransform>().localPosition = new Vector3(0, 38, 0);
+    }
     public override bool Initialize(DialogueChain data)
     {
 
