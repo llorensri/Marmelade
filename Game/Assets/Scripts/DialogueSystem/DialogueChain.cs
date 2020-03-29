@@ -43,6 +43,16 @@ public class DialogueData
             reference.Add(referenceWorld.transform);
         }
         text.transform.parent.GetComponent<Image>().enabled = true;
+
+
+        foreach(Transform c in text.transform.parent)
+        {
+            if (c.GetComponent<Text>())
+            {
+                c.GetComponent<Text>().enabled = true;
+            }
+        }
+
         if (entry.Animal == "PAN")
         {
             text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[0];
@@ -87,9 +97,8 @@ public class DialogueData
                 GameObject.Find(entry.Animal).transform.GetChild(0).gameObject.SetActive(false);
             }
 
-            Debug.Log("VARS ARE" + text.name + " " + referenceWorld.name);
-            Debug.Log("VARS ARE" + Camera.main.WorldToScreenPoint(referenceWorld.transform.position));
             Object.FindObjectOfType<PlaceUIElementAtWorld>().MoveToClickPoint(referenceWorld.transform.position + offset);
+            Object.FindObjectOfType<MusicEventsManager>().PlayClip(entry.Animal, entry.Inflection);
         }
 
     }
@@ -99,8 +108,15 @@ public class DialogueData
     {
         entry = CSVParser.GetKey(key_);
         text = entry.Text;
+        if (entry.Animal == "CHI")
+        {
+            PrepareBubble(obj, GameObject.FindGameObjectWithTag("KOA"), new Vector3(0, 3.6f, 0));
 
-        PrepareBubble(obj, GameObject.FindGameObjectWithTag(entry.Animal), new Vector3(0, 3.6f, 0));
+        }
+        else
+        {
+            PrepareBubble(obj, GameObject.FindGameObjectWithTag(entry.Animal), new Vector3(0, 3.6f, 0));
+        }
 
         return true;
     }
@@ -121,7 +137,7 @@ public class DialogueData
 #if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
 #else
-                    yield return new WaitForSeconds(.02f);
+                    yield return new WaitForSeconds(.05f);
 #endif
                 }
                 break;
@@ -133,7 +149,7 @@ public class DialogueData
 #if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
 #else
-                    yield return new WaitForSeconds(.02f);
+                    yield return new WaitForSeconds(.05f);
 #endif
                 }
                 break;
