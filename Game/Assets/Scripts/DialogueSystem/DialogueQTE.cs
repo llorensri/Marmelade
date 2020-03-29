@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 using TMPro;
 
@@ -88,7 +89,14 @@ public class DialogueQTE : DialogueBase
     {
         return (First.IsWriting | (Second != null && Second.IsWriting) | (Third != null && Third.IsWriting));
     }
-
+    public override void END()
+    {
+        foreach (Transform t in transform)
+        {
+            t.GetComponent<Image>().enabled = false;
+        }
+        CharacterController2D.block_input = false;
+    }
     private void Update()
     {
         if (_initialized && !anyWriting())
@@ -98,7 +106,9 @@ public class DialogueQTE : DialogueBase
             {
                 _actionPressed = 1;
                 _GUITextSecond.text = "";
+                _GUITextSecond.transform.parent.GetComponent<Image>().enabled = false;
                 _GUITextThird.text = "";
+                _GUITextThird.transform.parent.GetComponent<Image>().enabled = false;
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(First.entry.Inflection);
             }
             else if ((Second != null) && Input.GetKeyDown(KeyCode.X))
@@ -106,7 +116,9 @@ public class DialogueQTE : DialogueBase
 
                 _actionPressed = 2;
                 _GUITextThird.text = "";
+                _GUITextThird.transform.parent.GetComponent<Image>().enabled = false;
                 _GUITextFirst.text = "";
+                _GUITextFirst.transform.parent.GetComponent<Image>().enabled = false;
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Second.entry.Inflection);
             }
             else if ((Third != null) && Input.GetKeyDown(KeyCode.C))
@@ -114,7 +126,9 @@ public class DialogueQTE : DialogueBase
 
                 _actionPressed = 3;
                 _GUITextSecond.text = "";
+                _GUITextSecond.transform.parent.GetComponent<Image>().enabled = false;
                 _GUITextFirst.text = "";
+                _GUITextFirst.transform.parent.GetComponent<Image>().enabled = false;
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Third.entry.Inflection);
             }
 
@@ -155,7 +169,8 @@ public class DialogueQTE : DialogueBase
         //TODO: HIDE/SHOW TEXT IN A BETTER WAY
         foreach(Transform t in DialogueRef.transform)
         {
-            t.GetComponent<TextMeshProUGUI>().text = "";
+            t.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            t.GetComponent<Image>().enabled = false;
         }
         //TODO: DOTween to Zoom in when a Dialogue starts ends
         //TODO: Block Unblock Movement when commenting

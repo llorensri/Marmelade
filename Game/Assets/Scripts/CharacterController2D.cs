@@ -5,6 +5,8 @@ public class CharacterController2D : MonoBehaviour
 {
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
 
+    public Vector3 initial_pos;
+
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
@@ -23,7 +25,12 @@ public class CharacterController2D : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    public void ForceInitialPose()
+    {
+        transform.position = initial_pos;
+    }
+
+    private void Update()
     {
         if (!block_input)
         {
