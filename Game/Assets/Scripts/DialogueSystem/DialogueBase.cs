@@ -9,7 +9,8 @@ public abstract class DialogueBase : MonoBehaviour
     protected Text _GUIText;
 
     public abstract void END();
-   
+    public void ENDDAY() { GameManagerScript.Instance.AdvanceDay(); }
+
 
     public virtual bool Initialize(DialogueChain chain) { print("I should not be executing!"); return false; }
 

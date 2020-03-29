@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Day2_Morning.unity
     guid: f1cf01f49b1fedc429b602887f587d2b
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 30bdcf9057d6cf04d8b539cafb487874
   m_configObjects: {}
