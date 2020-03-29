@@ -137,7 +137,9 @@ public class DialogueData
 #if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
 #else
-                    yield return new WaitForSeconds(.05f);
+                    yield return new WaitForSeconds(0);
+
+                    // yield return new WaitForSeconds(.025f);
 #endif
                 }
                 break;
@@ -149,7 +151,8 @@ public class DialogueData
 #if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
 #else
-                    yield return new WaitForSeconds(.05f);
+                    yield return new WaitForSeconds(0);
+                    //  yield return new WaitForSeconds(.025f);
 #endif
                 }
                 break;
