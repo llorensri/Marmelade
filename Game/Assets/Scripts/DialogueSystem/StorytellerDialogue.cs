@@ -57,7 +57,7 @@ public class StorytellerDialogue : DialogueBase
     }
 
 
-    private void Update()
+    private void LateUpdate()
     {
         if (_initialized && !chain.data[_index].IsWriting && Input.GetButtonDown("Action"))
         {
@@ -65,18 +65,15 @@ public class StorytellerDialogue : DialogueBase
 
             if (_index == chain.data.Count)
             {
-                _initialized = false;
                 _GUIText.SetText("");
                 CharacterController2D.block_input = false;
+                _initialized = false;
                 chain.data[_index - 1].post_execution_event.Invoke();
 
             }
             else
             {
-                chain.data[_index - 1].post_execution_event.Invoke();
-
                 StartCoroutine(chain.data[_index].Type(_GUIText));
-
             }
 
         }

@@ -48,8 +48,10 @@ public class CharacterController2D : MonoBehaviour
 
             if (Input.GetButtonDown("Action"))
             {
+                print("I HIT THIS");
                 eventToTrigger.Invoke();
-                block_input = true;
+                eventToTrigger = null;
+                block_input = (!FindObjectOfType<StorytellerDialogue>().Initialized | !FindObjectOfType<DialogueQTE>().Initialized);
             }
         }
     }

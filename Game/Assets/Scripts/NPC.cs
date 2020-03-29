@@ -21,6 +21,7 @@ public class NPC : MonoBehaviour
     {
         if (col.gameObject.layer == LayerMask.NameToLayer("Character"))
         {
+            print("tst");
             transform.GetChild(0).gameObject.SetActive(true);
             Action();
             FindObjectOfType<CharacterController2D>().eventToTrigger = onAction;
@@ -31,6 +32,7 @@ public class NPC : MonoBehaviour
     {
         if (col.gameObject.layer == LayerMask.NameToLayer("Character"))
         {
+            print("tst2");
             transform.GetChild(0).gameObject.SetActive(false);
             FindObjectOfType<CharacterController2D>().eventToTrigger.RemoveAllListeners();
         }

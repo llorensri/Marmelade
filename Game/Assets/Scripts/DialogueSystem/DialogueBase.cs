@@ -17,7 +17,7 @@ public abstract class DialogueBase : MonoBehaviour
 
     protected int _index = 0;
     protected bool _initialized = false;
-
+    public bool Initialized { get { return _initialized; } }
 
 
 }

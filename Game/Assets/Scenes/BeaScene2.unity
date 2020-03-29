@@ -1228,7 +1228,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &596931301
@@ -2403,8 +2403,6 @@ GameObject:
   - component: {fileID: 1307527677}
   - component: {fileID: 1307527676}
   - component: {fileID: 1307527680}
-  - component: {fileID: 1307527681}
-  - component: {fileID: 1307527682}
   - component: {fileID: 1307527683}
   m_Layer: 9
   m_Name: Character
@@ -2531,7 +2529,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2927392}
+  m_Offset: {x: 0, y: 0.06155002}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2542,40 +2540,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5738977, y: 0.8646039}
+  m_Size: {x: 0.9641583, y: 2.0274322}
   m_EdgeRadius: 0
---- !u!58 &1307527681
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307527675}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.54}
-  serializedVersion: 2
-  m_Radius: 0.39607614
---- !u!58 &1307527682
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307527675}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.67}
-  serializedVersion: 2
-  m_Radius: 0.28678977
 --- !u!114 &1307527683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,7 +2823,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1711310159
@@ -3091,7 +3057,7 @@ SpriteRenderer:
   m_Size: {x: 1.1177644, y: 2.0512378}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1840689580
@@ -3550,7 +3516,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2102020635
@@ -3649,11 +3615,6 @@ PrefabInstance:
       propertyPath: data.Array.data[2].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1149680731}
-    - target: {fileID: 8517325840577230907, guid: e0ace7bee96991c40b471228935f071b,
-        type: 3}
-      propertyPath: ToTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2048469097}
     - target: {fileID: 8517325840654652635, guid: e0ace7bee96991c40b471228935f071b,
         type: 3}
       propertyPath: data.Array.data[1].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
