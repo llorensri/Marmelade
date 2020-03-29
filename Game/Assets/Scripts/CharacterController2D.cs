@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 public class CharacterController2D : MonoBehaviour
 {
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
@@ -13,11 +13,19 @@ public class CharacterController2D : MonoBehaviour
     [Range(.25f, 100.0f)]
     public float speed_ = .75f;
     public static bool block_input = false;
-   
+
     [HideInInspector]
     public UnityEvent eventToTrigger;
 
 
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            block_input = false;
+        }
+    }
 
     private void Awake()
     {
@@ -39,7 +47,7 @@ public class CharacterController2D : MonoBehaviour
             if (Mathf.Abs(movement) > .05f)
             {
                 transform.position += Vector3.right * (movement * Time.deltaTime);
-                GetComponent<Animator>().SetBool("walking",true);
+                GetComponent<Animator>().SetBool("walking", true);
                 // If the input is moving the player right and the player is facing left...
                 if (movement > 0 && !m_FacingRight)
                 {
@@ -55,8 +63,10 @@ public class CharacterController2D : MonoBehaviour
             }
             else
             {
-                GetComponent<Animator>().SetBool("walking", false);
-
+                if (GetComponent<Animator>())
+                {
+                    GetComponent<Animator>().SetBool("walking", false);
+                }
             }
 
             if (Input.GetButtonDown("Action"))

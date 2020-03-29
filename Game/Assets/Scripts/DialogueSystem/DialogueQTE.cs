@@ -107,21 +107,25 @@ public class DialogueQTE : DialogueBase
                 _actionPressed = 1;
                 _GUITextSecond.text="";
                 _GUITextSecond.transform.parent.GetComponent<Image>().enabled = false;
-                foreach (Transform a in _GUITextSecond.transform)
+                foreach (Transform a in _GUITextSecond.transform.parent)
                 {
                     if (a.GetComponent<Text>())
                     {
                         a.GetComponent<Text>().enabled = false;
                     }
                 }
+                _GUITextSecond.transform.parent.GetComponent<Image>().enabled = false;
+
                 _GUITextThird.text = "";
-                foreach (Transform a in _GUITextThird.transform)
+                foreach (Transform a in _GUITextThird.transform.parent)
                 {
                     if (a.GetComponent<Text>())
                     {
                         a.GetComponent<Text>().enabled = false;
                     }
                 }
+                _GUITextThird.transform.parent.GetComponent<Image>().enabled = false;
+
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(First.entry.Inflection);
             }
             else if ((Second != null) && Input.GetKeyDown(KeyCode.X))
@@ -129,21 +133,25 @@ public class DialogueQTE : DialogueBase
 
                 _actionPressed = 2;
                 _GUITextThird.text = "";
-                foreach (Transform a in _GUITextThird.transform)
+                foreach (Transform a in _GUITextThird.transform.parent)
                 {
                     if (a.GetComponent<Text>())
                     {
                         a.GetComponent<Text>().enabled = false;
                     }
                 }
+                _GUITextThird.transform.parent.GetComponent<Image>().enabled = false;
+
                 _GUITextFirst.text = "";
-                foreach (Transform a in _GUITextFirst.transform)
+                foreach (Transform a in _GUITextFirst.transform.parent)
                 {
                     if (a.GetComponent<Text>())
                     {
                         a.GetComponent<Text>().enabled = false;
                     }
                 }
+                _GUITextFirst.transform.parent.GetComponent<Image>().enabled = false;
+
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Second.entry.Inflection);
             }
             else if ((Third != null) && Input.GetKeyDown(KeyCode.C))
@@ -151,21 +159,24 @@ public class DialogueQTE : DialogueBase
 
                 _actionPressed = 3;
                 _GUITextSecond.text = "";
-                foreach (Transform a in _GUITextSecond.transform)
+                foreach (Transform a in _GUITextSecond.transform.parent)
                 {
                     if (a.GetComponent<Text>())
                     {
                         a.GetComponent<Text>().enabled = false;
                     }
                 }
+                _GUITextSecond.transform.parent.GetComponent<Image>().enabled = false;
                 _GUITextFirst.text = "";
-                foreach (Transform a in _GUITextFirst.transform)
+                foreach (Transform a in _GUITextFirst.transform.parent)
                 {
                     if (a.GetComponent<Text>())
                     {
                         a.GetComponent<Text>().enabled = false;
                     }
                 }
+                _GUITextFirst.transform.parent.GetComponent<Image>().enabled = false;
+
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Third.entry.Inflection);
             }
 
