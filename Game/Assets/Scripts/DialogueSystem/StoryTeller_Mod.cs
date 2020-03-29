@@ -51,7 +51,7 @@ public class StoryTeller_Mod : DialogueBase
             CharacterController2D.block_input = true;
 
             chain = data;
-            _GUIText = GetComponent<TextMeshProUGUI>();
+            _GUIText = GetComponent<Text>();
             _initialized = true;
             return true;
         }
@@ -104,7 +104,7 @@ public class StoryTeller_Mod : DialogueBase
 
             if (_index == chain.data.Count)
             {
-                _GUIText.SetText("");
+                _GUIText.text = "";
                 _initialized = false;
                 transform.parent.GetComponent<Image>().enabled = false;
 

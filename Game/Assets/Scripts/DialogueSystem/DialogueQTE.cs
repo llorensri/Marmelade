@@ -13,7 +13,7 @@ public class DialogueQTE : DialogueBase
     private DialogueData First;
     private DialogueData Second;
     private DialogueData Third;
-    private TextMeshProUGUI _GUITextFirst, _GUITextSecond, _GUITextThird;
+    private Text _GUITextFirst, _GUITextSecond, _GUITextThird;
     GameObject DialogueRef;
     public float decisionSeconds = 1.5f;
 
@@ -41,9 +41,9 @@ public class DialogueQTE : DialogueBase
         DialogueRef.SetActive(true);
         try
         {
-            _GUITextFirst = (TextMeshProUGUI)DialogueRef.GetComponent<RefHandler>().handler[0];
-            _GUITextSecond = (TextMeshProUGUI)DialogueRef.GetComponent<RefHandler>().handler[1];
-            _GUITextThird = (TextMeshProUGUI)DialogueRef.GetComponent<RefHandler>().handler[2];
+            _GUITextFirst = (Text)DialogueRef.GetComponent<RefHandler>().handler[0];
+            _GUITextSecond = (Text)DialogueRef.GetComponent<RefHandler>().handler[1];
+            _GUITextThird = (Text)DialogueRef.GetComponent<RefHandler>().handler[2];
             _GUITextFirst.text = "";
             _GUITextSecond.text = "";
             _GUITextThird.text = "";
@@ -105,7 +105,7 @@ public class DialogueQTE : DialogueBase
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 _actionPressed = 1;
-                _GUITextSecond.text = "";
+                _GUITextSecond.text="";
                 _GUITextSecond.transform.parent.GetComponent<Image>().enabled = false;
                 foreach (Transform a in _GUITextSecond.transform)
                 {
@@ -206,7 +206,7 @@ public class DialogueQTE : DialogueBase
         //TODO: HIDE/SHOW TEXT IN A BETTER WAY
         foreach(Transform t in DialogueRef.transform)
         {
-            t.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            t.GetComponentInChildren<Text>().text = "";
             t.GetComponent<Image>().enabled = false;
 
             foreach(Transform a in t)

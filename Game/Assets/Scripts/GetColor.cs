@@ -20,6 +20,6 @@ public class GetColor : MonoBehaviour
         v /= 4;
         t = Color.HSVToRGB(h, s, v);
         t.a = 1.0f;
-        GetComponent<TextMeshProUGUI>().color = t;
+        GetComponent<Text>().color = t;
     }
 }
