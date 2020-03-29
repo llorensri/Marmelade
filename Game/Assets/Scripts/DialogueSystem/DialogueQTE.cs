@@ -96,6 +96,12 @@ public class DialogueQTE : DialogueBase
             //TODO: CHANGE THIS FOR A BUTTON
             if (Input.GetKeyDown(KeyCode.Z))
             {
+                _GUIText.SetText("");
+                CharacterController2D.block_input = false;
+                _initialized = false;
+                chain.data[_index - 1].post_execution_event.Invoke();
+
+
                 GameManagerScript.Instance.karma += First.karma_counter;
 
                 First.post_execution_event.Invoke();

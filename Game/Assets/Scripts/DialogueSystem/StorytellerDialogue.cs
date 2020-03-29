@@ -57,7 +57,7 @@ public class StorytellerDialogue : DialogueBase
     }
 
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (_initialized && !chain.data[_index].IsWriting && Input.GetButtonDown("Action"))
         {

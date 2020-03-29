@@ -12,6 +12,19 @@ public class StoryTeller_Mod : DialogueBase
 
     public int karma_good, karma_bad;
 
+    public void SefFirst(DialogueChain a)
+    {
+        First = a;
+    }
+    public void SetSecond(DialogueChain b)
+    {
+        Second = b;
+    }
+    public void SetThird(DialogueChain c)
+    {
+        Third = c;
+    }
+
     public override bool Initialize(DialogueChain data)
     {
 
@@ -35,7 +48,6 @@ public class StoryTeller_Mod : DialogueBase
     public override void Action()
     {
         DialogueChain data;
-
         if (GameManagerScript.Instance.karma >= karma_good)
         {
             data = First;
@@ -49,37 +61,22 @@ public class StoryTeller_Mod : DialogueBase
             data = Second;
         }
 
-        if (!_initialized)
-        {
-            if (Initialize(data))
-            {
-                _index = 0;
-                chain.data[_index].pre_execution_event.Invoke();
-                StartCoroutine(chain.data[_index].Type(_GUIText));
-            }
-        }
-        else
-        {
-            print("HEY BOY, STILL HERE, GIMME TIME!");
-        }
-    }
-    public override void Action(DialogueChain data)
-    {
-        if (!_initialized)
-        {
-            if (Initialize(data))
-            {
-                _index = 0;
-                chain.data[_index].pre_execution_event.Invoke();
-                StartCoroutine(chain.data[_index].Type(_GUIText));
-            }
-        }
-        else
-        {
-            print("HEY BOY, STILL HERE, GIMME TIME!");
-        }
-    }
 
+        if (!_initialized)
+        {
+            if (Initialize(data))
+            {
+                _index = 0;
+                chain.data[_index].pre_execution_event.Invoke();
+                StartCoroutine(chain.data[_index].Type(_GUIText));
+            }
+        }
+        else
+        {
+            print("HEY BOY, STILL HERE, GIMME TIME!");
+        }
+    }
+ 
 
     private void LateUpdate()
     {
