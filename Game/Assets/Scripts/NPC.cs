@@ -34,7 +34,7 @@ public class NPC : MonoBehaviour
         {
             print("tst2");
             transform.GetChild(0).gameObject.SetActive(false);
-            FindObjectOfType<CharacterController2D>().eventToTrigger.RemoveAllListeners();
+            FindObjectOfType<CharacterController2D>().eventToTrigger = null;
         }
     }
 
