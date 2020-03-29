@@ -24,6 +24,15 @@ public class StoryTeller_Mod : DialogueBase
     {
         Third = c;
     }
+    public void SetKarmaGood(int tst)
+    {
+        karma_good =tst;
+
+    }
+    public void SetKarmaBad(int tst)
+    {
+        karma_bad = tst;
+    }
 
     public override bool Initialize(DialogueChain data)
     {
