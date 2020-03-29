@@ -87,7 +87,7 @@ public class StoryTeller_Mod : DialogueBase
     }
  
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (_initialized && !chain.data[_index].IsWriting && Input.GetButtonDown("Action"))
         {
@@ -96,7 +96,6 @@ public class StoryTeller_Mod : DialogueBase
             if (_index == chain.data.Count)
             {
                 _GUIText.SetText("");
-                CharacterController2D.block_input = false;
                 _initialized = false;
                 chain.data[_index - 1].post_execution_event.Invoke();
 

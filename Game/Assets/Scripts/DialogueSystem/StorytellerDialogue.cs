@@ -66,7 +66,6 @@ public class StorytellerDialogue : DialogueBase
             if (_index == chain.data.Count)
             {
                 _GUIText.SetText("");
-                CharacterController2D.block_input = false;
                 _initialized = false;
                 chain.data[_index - 1].post_execution_event.Invoke();
 

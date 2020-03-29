@@ -16,7 +16,7 @@ public class DialogueQTE : DialogueBase
     GameObject DialogueRef;
     public float decisionSeconds = 1.5f;
 
-    private bool _actionPressed = false;
+    private int _actionPressed = 0;
 
     public override bool Initialize(DialogueChain data)
     {
@@ -46,7 +46,7 @@ public class DialogueQTE : DialogueBase
             _GUITextFirst.text = "";
             _GUITextSecond.text = "";
             _GUITextThird.text = "";
-            _actionPressed = false;
+            _actionPressed = 0;
             CharacterController2D.block_input = true;
 
             _initialized = true;
@@ -96,43 +96,29 @@ public class DialogueQTE : DialogueBase
             //TODO: CHANGE THIS FOR A BUTTON
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                _GUIText.SetText("");
-                CharacterController2D.block_input = false;
-                _initialized = false;
-                chain.data[_index - 1].post_execution_event.Invoke();
-
-
-                GameManagerScript.Instance.karma += First.karma_counter;
-
-                First.post_execution_event.Invoke();
-                _actionPressed = true;
+                _actionPressed = 1;
                 _GUITextSecond.text = "";
                 _GUITextThird.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(First.entry.Inflection);
             }
             else if ((Second != null) && Input.GetKeyDown(KeyCode.X))
             {
-                GameManagerScript.Instance.karma += First.karma_counter;
 
-                Second.post_execution_event.Invoke();
-                _actionPressed = true;
+                _actionPressed = 2;
                 _GUITextThird.text = "";
                 _GUITextFirst.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Second.entry.Inflection);
             }
             else if ((Third != null) && Input.GetKeyDown(KeyCode.C))
             {
-                GameManagerScript.Instance.karma += First.karma_counter;
 
-                Third.post_execution_event.Invoke();
-                _actionPressed = true;
+                _actionPressed = 3;
                 _GUITextSecond.text = "";
                 _GUITextFirst.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Third.entry.Inflection);
-                GameManagerScript.Instance.karma += First.karma_counter;
             }
 
-            if (_actionPressed)
+            if (_actionPressed != 0)
             {
                 StartCoroutine(waitResponse());
             }
@@ -142,7 +128,30 @@ public class DialogueQTE : DialogueBase
     public IEnumerator waitResponse()
     {
         yield return new WaitForSeconds(decisionSeconds);
-        CharacterController2D.block_input = false;
+        _initialized = false;
+        switch (_actionPressed)
+        {
+            case 1:
+                GameManagerScript.Instance.karma += First.karma_counter;
+
+                First.post_execution_event.Invoke();
+
+                break;
+            case 2:
+                GameManagerScript.Instance.karma += Second.karma_counter;
+
+                Second.post_execution_event.Invoke();
+
+                break;
+            case 3:
+                GameManagerScript.Instance.karma += Third.karma_counter;
+
+                Third.post_execution_event.Invoke();
+
+                break;
+        }
+        _actionPressed = 0;
+
         //TODO: HIDE/SHOW TEXT IN A BETTER WAY
         foreach(Transform t in DialogueRef.transform)
         {
@@ -150,7 +159,6 @@ public class DialogueQTE : DialogueBase
         }
         //TODO: DOTween to Zoom in when a Dialogue starts ends
         //TODO: Block Unblock Movement when commenting
-        _initialized = false;
 
     }
 }
