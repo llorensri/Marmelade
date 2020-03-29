@@ -48,14 +48,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TUC
+    uniqueID: 1646199745
+    locked: 0
+  - name: LIN
+    uniqueID: 3018850281
+    locked: 0
   - name: Character
     uniqueID: 1292930533
     locked: 0
+  - name: CHA
+    uniqueID: 2712053195
+    locked: 0
   - name: KOA
     uniqueID: 2816038829
-    locked: 0
-  - name: TUC
-    uniqueID: 1646199745
     locked: 0
   - name: PAN
     uniqueID: 2012588617
@@ -63,9 +69,6 @@ TagManager:
   - name: CHI
     uniqueID: 2402967883
     locked: 0
-  - name: LIN
-    uniqueID: 3018850281
-    locked: 0
-  - name: CHA
-    uniqueID: 2712053195
+  - name: UI
+    uniqueID: 446706517
     locked: 0
