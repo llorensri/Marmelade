@@ -597,7 +597,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[4].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842254344033071, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[4].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -677,7 +677,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[6].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842254882143829, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[6].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -727,7 +727,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[3].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842254949516341, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[3].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -807,7 +807,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[3].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842255574255245, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[3].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -887,7 +887,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[4].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842255819055480, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[4].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -897,7 +897,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[5].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842255827364778, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[5].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1247,7 +1247,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[2].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842256107097181, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[2].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1317,7 +1317,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[5].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842256126833194, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[5].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1327,7 +1327,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[3].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 455640478}
     - target: {fileID: 511842256250458965, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[3].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
