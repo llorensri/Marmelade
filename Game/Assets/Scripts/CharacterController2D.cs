@@ -8,8 +8,9 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
-
-    public static bool block_input=false;
+    [Range(.25f, 100.0f)]
+    public float speed_ = .75f;
+    public static bool block_input = false;
 
     [HideInInspector]
     public UnityEvent eventToTrigger;
@@ -26,15 +27,23 @@ public class CharacterController2D : MonoBehaviour
     {
         if (!block_input)
         {
-            float movement = Input.GetAxis("Horizontal");
+            float movement = Input.GetAxis("Horizontal") * speed_;
 
             if (Mathf.Abs(movement) > .05f)
             {
-                Move(movement);
-            }
-            else
-            {
-                m_Rigidbody2D.velocity = Vector2.zero;
+                transform.position += Vector3.right * (movement * Time.deltaTime);
+                // If the input is moving the player right and the player is facing left...
+                if (movement > 0 && !m_FacingRight)
+                {
+                    // ... flip the player.
+                    Flip();
+                }
+                // Otherwise if the input is moving the player left and the player is facing right...
+                else if (movement < 0 && m_FacingRight)
+                {
+                    // ... flip the player.
+                    Flip();
+                }
             }
 
             if (Input.GetButtonDown("Action"))
@@ -55,18 +64,7 @@ public class CharacterController2D : MonoBehaviour
         // And then smoothing it out and applying it to the character
         m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
-        // If the input is moving the player right and the player is facing left...
-        if (move > 0 && !m_FacingRight)
-        {
-            // ... flip the player.
-            Flip();
-        }
-        // Otherwise if the input is moving the player left and the player is facing right...
-        else if (move < 0 && m_FacingRight)
-        {
-            // ... flip the player.
-            Flip();
-        }
+
 
     }
 

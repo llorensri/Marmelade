@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 69047312}
-  - component: {fileID: 69047313}
+  - component: {fileID: 69047311}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -277,6 +277,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &69047311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69047310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7e3f9d733ad6b46b23b7ff8291d7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodChoices: 0
+  badChoices: 0
+  karma: 0
 --- !u!4 &69047312
 Transform:
   m_ObjectHideFlags: 0
@@ -291,33 +306,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &69047313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69047310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fde4cc53ab6a7d4b87646df47ba40e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  seconds: 2
-  ToTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1149680731}
-        m_MethodName: Action
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 307546152}
-          m_ObjectArgumentAssemblyTypeName: DialogueChain, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &104663081
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,12 +683,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 72add8fb1065aa044ab0765463b75418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a77b89aa4c9866479f4ca9877fa2605, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 2, y: 1.9238281}
+  m_Size: {x: 9.44, y: 2.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -861,7 +849,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4346575, y: 1.9587854}
+    oldSize: {x: 1.6481482, y: 2.2502716}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -945,7 +933,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4346575, y: 1.9587854}
+    oldSize: {x: 1.6481482, y: 2.2502716}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1254,7 +1242,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1615663, y: 2.1784687}
+    oldSize: {x: 1.3344184, y: 2.5026455}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1338,7 +1326,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1615663, y: 2.1784687}
+    oldSize: {x: 1.3344184, y: 2.5026455}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1591,7 +1579,18 @@ MonoBehaviour:
         m_Calls: []
     post_execution_event:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2048469097}
+          m_MethodName: Action
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 699143792}
+            m_ObjectArgumentAssemblyTypeName: DialogueChain, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &527301890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,7 +1799,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0846287, y: 1.994003}
+    oldSize: {x: 1.2460318, y: 2.2907298}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1938,7 +1937,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0846287, y: 1.994003}
+    oldSize: {x: 1.2460318, y: 2.2907298}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3899,6 +3898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
+  speed_: 28
   eventToTrigger:
     m_PersistentCalls:
       m_Calls: []
@@ -3941,12 +3941,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 56
-  m_Sprite: {fileID: 21300000, guid: 0ef0c509438692e49a3bc1eb3419524d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c43878129ef9d0d4ba2b2cce6bc95aa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.18, y: 2.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3986,8 +3986,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0002217, y: 1.923431}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.18, y: 2.39}
+    newSize: {x: 1.18, y: 2.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4039,6 +4039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb27663371a07442beda33596ae6f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 1.175
 --- !u!1 &1356085961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4441,7 +4442,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0846287, y: 1.994003}
+    oldSize: {x: 1.2460318, y: 2.2907298}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4525,7 +4526,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0846287, y: 1.994003}
+    oldSize: {x: 1.2460318, y: 2.2907298}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4859,7 +4860,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1177644, y: 2.0512378}
+    oldSize: {x: 1.2840984, y: 2.3564816}
     newSize: {x: 1.1177644, y: 2.0512378}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4943,7 +4944,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1177644, y: 2.0512378}
+    oldSize: {x: 1.2840984, y: 2.3564816}
     newSize: {x: 1.1177644, y: 2.0512378}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5506,7 +5507,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.0460565, y: 2.0030973}
+    oldSize: {x: 2.3505292, y: 2.3011773}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5590,7 +5591,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.0460565, y: 2.0030973}
+    oldSize: {x: 2.3505292, y: 2.3011773}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

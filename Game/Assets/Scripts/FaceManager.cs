@@ -40,7 +40,7 @@ public class FaceManager : MonoBehaviour
         {
             i = 7;
         }
-        transform.Find("Face").transform.position = new Vector3(-(i* offset),0,0);
+        transform.Find("Face").transform.localPosition = new Vector3(-(i* offset),0,0);
     }
 
 }

@@ -74,7 +74,9 @@ public class StorytellerDialogue : DialogueBase
             else
             {
                 chain.data[_index - 1].post_execution_event.Invoke();
+
                 StartCoroutine(chain.data[_index].Type(_GUIText));
+
             }
 
         }

@@ -8,7 +8,7 @@ public class GameManagerScript : MonoBehaviour
 
     public int goodChoices;
     public int badChoices;
-    public int karma;
+    public int karma = 0;
 
     private void Awake()
     {

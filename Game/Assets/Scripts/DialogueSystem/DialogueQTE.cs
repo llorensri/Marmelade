@@ -96,24 +96,28 @@ public class DialogueQTE : DialogueBase
             //TODO: CHANGE THIS FOR A BUTTON
             if (Input.GetKeyDown(KeyCode.Z))
             {
+                GameManagerScript.Instance.karma += First.karma_counter;
+
                 First.post_execution_event.Invoke();
                 _actionPressed = true;
                 _GUITextSecond.text = "";
                 _GUITextThird.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(First.entry.Inflection);
-                GameManagerScript.Instance.karma += First.karma_counter;
             }
             else if ((Second != null) && Input.GetKeyDown(KeyCode.X))
             {
+                GameManagerScript.Instance.karma += First.karma_counter;
+
                 Second.post_execution_event.Invoke();
                 _actionPressed = true;
                 _GUITextThird.text = "";
                 _GUITextFirst.text = "";
                 GameObject.Find("Character").GetComponent<FaceManager>().SetFace(Second.entry.Inflection);
-                GameManagerScript.Instance.karma += First.karma_counter;
             }
             else if ((Third != null) && Input.GetKeyDown(KeyCode.C))
             {
+                GameManagerScript.Instance.karma += First.karma_counter;
+
                 Third.post_execution_event.Invoke();
                 _actionPressed = true;
                 _GUITextSecond.text = "";
