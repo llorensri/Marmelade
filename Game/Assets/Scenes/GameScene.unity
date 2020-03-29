@@ -858,6 +858,11 @@ PrefabInstance:
       propertyPath: data.Array.data[18].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 511842255688752654, guid: 83cc4a3022386b644a9606fb7e2aeda5,
+        type: 3}
+      propertyPath: data.Array.data[14].key_
+      value: 01_PAN_ANG_SEQ_06
+      objectReference: {fileID: 0}
     - target: {fileID: 511842255814725769, guid: 83cc4a3022386b644a9606fb7e2aeda5,
         type: 3}
       propertyPath: data.Array.data[0].post_execution_event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3592,7 +3597,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6481482, y: 2.2502716}
+    oldSize: {x: 1.61, y: 2.215}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3676,7 +3681,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6481482, y: 2.2502716}
+    oldSize: {x: 1.61, y: 2.215}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3724,7 +3729,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b85a6cf4e840f05439c14bf3de59cc62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59938dc3408f5d44f91b213010815f93, type: 3}
   m_Color: {r: 0.6392157, g: 0.75686276, b: 0.972549, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3778,7 +3783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb27663371a07442beda33596ae6f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 1.175
+  offset: 1.161
 --- !u!1 &720547751
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,14 +7203,14 @@ SpriteRenderer:
   m_SortingLayerID: -1582914101
   m_SortingLayer: 4
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 72add8fb1065aa044ab0765463b75418, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9941e9d7249f85844bce2081039d84da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.2976189, y: 2.210112}
+  m_Size: {x: 12.887273, y: 2.2150002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 1
