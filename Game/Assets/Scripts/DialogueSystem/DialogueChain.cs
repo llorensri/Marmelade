@@ -79,10 +79,12 @@ public class DialogueData
             if (entry.Animal == "CHI")
             {
                 GameObject.Find("KOA").GetComponent<FaceManager>().SetFace(entry.Inflection);
+                GameObject.Find("KOA").transform.GetChild(0).gameObject.SetActive(false);
             }
             else
             {
                 GameObject.Find(entry.Animal).GetComponent<FaceManager>().SetFace(entry.Inflection);
+                GameObject.Find(entry.Animal).transform.GetChild(0).gameObject.SetActive(false);
             }
 
         }
@@ -102,9 +104,10 @@ public class DialogueData
 
     public IEnumerator Type(TextMeshProUGUI _GUIText)
     {
+        Debug.Log("I ENTER HERE");
+        _isWriting = true;
 
         ParseData(_GUIText.gameObject);
-        _isWriting = true;
         _GUIText.SetText("");
         switch (typeStyle)
         {
@@ -114,6 +117,8 @@ public class DialogueData
                     _GUIText.text += c;
 #if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
+#else
+                    yield return new WaitForSeconds(.02f);
 #endif
                 }
                 break;
@@ -124,6 +129,8 @@ public class DialogueData
                     _GUIText.text += str + " ";
 #if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
+#else
+                    yield return new WaitForSeconds(.02f);
 #endif
                 }
                 break;

@@ -73,6 +73,7 @@ public class StorytellerDialogue : DialogueBase
 
                 if (_index == chain.data.Count)
                 {
+                    print("adasdas");
                     _GUIText.SetText("");
                     transform.parent.GetComponent<Image>().enabled = false;
                     _initialized = false;

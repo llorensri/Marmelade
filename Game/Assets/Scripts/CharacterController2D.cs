@@ -13,7 +13,7 @@ public class CharacterController2D : MonoBehaviour
     [Range(.25f, 100.0f)]
     public float speed_ = .75f;
     public static bool block_input = false;
-
+   
     [HideInInspector]
     public UnityEvent eventToTrigger;
 
@@ -39,6 +39,7 @@ public class CharacterController2D : MonoBehaviour
             if (Mathf.Abs(movement) > .05f)
             {
                 transform.position += Vector3.right * (movement * Time.deltaTime);
+                GetComponent<Animator>().SetBool("walking",true);
                 // If the input is moving the player right and the player is facing left...
                 if (movement > 0 && !m_FacingRight)
                 {
@@ -52,11 +53,17 @@ public class CharacterController2D : MonoBehaviour
                     Flip();
                 }
             }
+            else
+            {
+                GetComponent<Animator>().SetBool("walking", false);
+
+            }
 
             if (Input.GetButtonDown("Action"))
             {
                 if (eventToTrigger != null)
                 {
+                    GetComponent<Animator>().SetBool("walking", false);
                     print("I HIT THIS");
                     eventToTrigger.Invoke();
                     eventToTrigger = null;

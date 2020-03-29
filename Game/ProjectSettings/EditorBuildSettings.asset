@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 5e17aeba933ae4346889434d7f65a61f
   - enabled: 1
-    path: Assets/Scenes/BeaScene2.unity
-    guid: 378668b17ee2feb4ab9ed7c85ccb12ce
+    path: Assets/Scenes/Day2_Morning.unity
+    guid: f1cf01f49b1fedc429b602887f587d2b
   m_configObjects: {}

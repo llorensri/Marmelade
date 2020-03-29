@@ -40,7 +40,16 @@ public class FaceManager : MonoBehaviour
         {
             i = 7;
         }
-        transform.Find("Face").transform.localPosition = new Vector3(-(i* offset),0,0);
+        if (gameObject.name == "Character")
+        {
+            transform.Find("Face").transform.GetChild(0).localPosition = new Vector3(-(i * offset), 0, 0);
+
+        }
+        else
+        {
+            transform.Find("Face").transform.localPosition = new Vector3(-(i * offset), 0, 0);
+
+        }
     }
 
 }
