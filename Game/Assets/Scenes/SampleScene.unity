@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key_: 04_KOA_ANG_SEQ_31
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0
     pre_execution_event:
@@ -414,6 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key_: 04_KOA_ANG_SEQ_30
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.144
     pre_execution_event:
@@ -997,6 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key_: 01_KOA_SAD_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.065
     pre_execution_event:
@@ -1006,6 +1009,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - key_: 01_PAN_ANG_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.03
     pre_execution_event:
@@ -1015,6 +1019,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - key_: 01_PAN_FE_SEQ_02
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -1035,6 +1040,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_LIN_ANG_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -1055,6 +1061,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_LIN_NEU_SEQ_02
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -1075,6 +1082,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_TUC_SUR_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -1095,6 +1103,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_CHA_DIS_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -1680,7 +1689,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &472738372
@@ -2349,7 +2358,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &596931301
@@ -2478,6 +2487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key_: 04_KOA_NEU_SEQ_32
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0
     pre_execution_event:
@@ -2612,6 +2622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key_: 01_KOA_SAD_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.065
     pre_execution_event:
@@ -2621,6 +2632,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - key_: 01_PAN_ANG_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.03
     pre_execution_event:
@@ -2630,6 +2642,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - key_: 01_PAN_FE_SEQ_02
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -2650,6 +2663,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_LIN_ANG_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -2670,6 +2684,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_LIN_NEU_SEQ_02
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -2690,6 +2705,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_TUC_SUR_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -2710,6 +2726,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 01_CHA_DIS_SEQ_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.02
     pre_execution_event:
@@ -2859,6 +2876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - key_: 02_PRO_NEU_DTR_01
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.065
     pre_execution_event:
@@ -2879,6 +2897,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 02_PRO_NEU_DTR_02
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.204
     pre_execution_event:
@@ -2899,6 +2918,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - key_: 02_PRO_FEA_DTR_03
+    karma_counter: 0
     typeStyle: 0
     typeSpeed: 0.204
     pre_execution_event:
@@ -4431,6 +4451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas_txt_: {fileID: 1149680729}
+  pj_color: []
 --- !u!1 &1271179871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,6 +4745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
+  initial_pos: {x: 0, y: 0, z: 0}
   speed_: 0.75
   eventToTrigger:
     m_PersistentCalls:
@@ -5498,7 +5520,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1711310159
@@ -5663,6 +5685,9 @@ MonoBehaviour:
   FrontFade: {fileID: 533765366}
   Presentation: {fileID: 29634202}
   Flow: {fileID: 0}
+  ev:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1840689572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,7 +5889,7 @@ SpriteRenderer:
   m_Size: {x: 1.1177644, y: 2.0512378}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1840689580
@@ -6389,7 +6414,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2102020635

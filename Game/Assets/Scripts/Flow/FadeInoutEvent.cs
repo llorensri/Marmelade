@@ -9,6 +9,10 @@ public class FadeInoutEvent : MonoBehaviour
     public UnityEvent[] events;
     public UnityEvent[] post_events;
 
+    public void SetEventToTrigger(int i)
+    {
+        eventToTrigger = i;
+    }
     public void TriggerEvent()
     {
         events[eventToTrigger].Invoke();
