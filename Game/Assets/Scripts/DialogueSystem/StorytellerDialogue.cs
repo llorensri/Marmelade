@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.UI;
 public class StorytellerDialogue : DialogueBase
 {
     public override bool Initialize(DialogueChain data)
@@ -25,17 +26,19 @@ public class StorytellerDialogue : DialogueBase
         }
     }
 
+    public override void END()
+    {
+
+        transform.parent.GetComponent<Image>().enabled = false;
+        CharacterController2D.block_input = false;
+    }
+
     public override void Action()
     {
 
         if (chain != null)
         {
-            if (Initialize(chain))
-            {
-                _index = 0;
-                chain.data[_index].pre_execution_event.Invoke();
-                StartCoroutine(chain.data[_index].Type(_GUIText));
-            }
+            Action(chain);
         }
         else { print("DATA IS NULL"); }
     }
@@ -45,6 +48,8 @@ public class StorytellerDialogue : DialogueBase
         {
             if (Initialize(data))
             {
+
+
                 _index = 0;
                 chain.data[_index].pre_execution_event.Invoke();
                 StartCoroutine(chain.data[_index].Type(_GUIText));
@@ -57,25 +62,29 @@ public class StorytellerDialogue : DialogueBase
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (_initialized && !chain.data[_index].IsWriting && Input.GetButtonDown("Action"))
+        if (Input.GetButtonDown("Action"))
         {
-            ++_index;
 
-            if (_index == chain.data.Count)
+            if (_initialized && !chain.data[_index].IsWriting)
             {
-                _GUIText.SetText("");
-                CharacterController2D.block_input = false;
-                _initialized = false;
-                chain.data[_index - 1].post_execution_event.Invoke();
+                ++_index;
+
+                if (_index == chain.data.Count)
+                {
+                    _GUIText.SetText("");
+                    transform.parent.GetComponent<Image>().enabled = false;
+                    _initialized = false;
+                    chain.data[_index - 1].post_execution_event.Invoke();
+
+                }
+                else
+                {
+                    StartCoroutine(chain.data[_index].Type(_GUIText));
+                }
 
             }
-            else
-            {
-                StartCoroutine(chain.data[_index].Type(_GUIText));
-            }
-
         }
     }
 

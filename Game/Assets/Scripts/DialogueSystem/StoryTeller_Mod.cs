@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+
 using TMPro;
 public class StoryTeller_Mod : DialogueBase
 {
@@ -11,6 +13,13 @@ public class StoryTeller_Mod : DialogueBase
     public DialogueChain Third;
 
     public int karma_good, karma_bad;
+
+    public override void END()
+    {
+
+        transform.parent.GetComponent<Image>().enabled = false;
+        CharacterController2D.block_input = false;
+    }
 
     public void SefFirst(DialogueChain a)
     {
@@ -87,7 +96,7 @@ public class StoryTeller_Mod : DialogueBase
     }
  
 
-    private void LateUpdate()
+    private void Update()
     {
         if (_initialized && !chain.data[_index].IsWriting && Input.GetButtonDown("Action"))
         {
@@ -96,8 +105,9 @@ public class StoryTeller_Mod : DialogueBase
             if (_index == chain.data.Count)
             {
                 _GUIText.SetText("");
-                CharacterController2D.block_input = false;
                 _initialized = false;
+                transform.parent.GetComponent<Image>().enabled = false;
+
                 chain.data[_index - 1].post_execution_event.Invoke();
 
             }

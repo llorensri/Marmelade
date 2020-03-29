@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿#define _DEBUG
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 //TODO: Quick Fixaround, try to improve it
@@ -40,8 +42,51 @@ public class DialogueData
         {
             reference.Add(referenceWorld.transform);
         }
-        //TODO: THIS
+        text.transform.parent.GetComponent<Image>().enabled = true;
+        if (entry.Animal == "PAN")
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[0];
 
+        }
+        else if (entry.Animal == "LIN")
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[1];
+        }
+        else if (entry.Animal == "CHA")
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[2];
+        }
+        else if (entry.Animal == "TUC")
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[3];
+        }
+        else if (entry.Animal == "KOA")
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[4];
+        }
+        else if (entry.Animal == "CHI")
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[5];
+        }
+        else
+        {
+            text.transform.parent.GetComponent<Image>().color = Object.FindObjectOfType<DialogueManager>().pj_color[6];
+
+        }
+
+        if (entry.Animal != "PRO")
+        { 
+            if (entry.Animal == "CHI")
+            {
+                GameObject.Find("KOA").GetComponent<FaceManager>().SetFace(entry.Inflection);
+            }
+            else
+            {
+                GameObject.Find(entry.Animal).GetComponent<FaceManager>().SetFace(entry.Inflection);
+            }
+
+        }
+        
     }
 
     //PARSE ALL DATA FROM CSV NOT ONLY TEXT
@@ -67,7 +112,9 @@ public class DialogueData
                 foreach (char c in text)
                 {
                     _GUIText.text += c;
+#if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
+#endif
                 }
                 break;
             case TypeType.perWord:
@@ -75,7 +122,9 @@ public class DialogueData
                 foreach (string str in split)
                 {
                     _GUIText.text += str + " ";
+#if (!_DEBUG)
                     yield return new WaitForSeconds(typeSpeed);
+#endif
                 }
                 break;
         }

@@ -8,7 +8,8 @@ public abstract class DialogueBase : MonoBehaviour
     public DialogueChain chain;
     protected TextMeshProUGUI _GUIText;
 
-
+    public abstract void END();
+   
 
     public virtual bool Initialize(DialogueChain chain) { print("I should not be executing!"); return false; }
 
