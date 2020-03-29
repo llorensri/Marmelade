@@ -18,7 +18,7 @@ public class StorytellerDialogue : DialogueBase
             CharacterController2D.block_input = true;
 
             chain = data;
-            _GUIText = GetComponent<TextMeshProUGUI>();
+            _GUIText = GetComponent<Text>();
             _initialized = true;
             return true;
         }
@@ -78,7 +78,7 @@ public class StorytellerDialogue : DialogueBase
                 if (_index == chain.data.Count)
                 {
                     print("adasdas");
-                    _GUIText.SetText("");
+                    _GUIText.text="";
                     transform.parent.GetComponent<Image>().enabled = false;
                     _initialized = false;
                     chain.data[_index - 1].post_execution_event.Invoke();

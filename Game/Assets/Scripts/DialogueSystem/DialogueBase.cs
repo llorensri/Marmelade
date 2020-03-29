@@ -6,7 +6,7 @@ public abstract class DialogueBase : MonoBehaviour
 {
     [Header("Keyflow Here")]
     public DialogueChain chain;
-    protected TextMeshProUGUI _GUIText;
+    protected Text _GUIText;
 
     public abstract void END();
    

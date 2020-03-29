@@ -121,13 +121,13 @@ public class DialogueData
         return true;
     }
 
-    public IEnumerator Type(TextMeshProUGUI _GUIText)
+    public IEnumerator Type(Text _GUIText)
     {
         Debug.Log("I ENTER HERE");
         _isWriting = true;
 
         ParseData(_GUIText.gameObject);
-        _GUIText.SetText("");
+        _GUIText.text = "";
         switch (typeStyle)
         {
             case TypeType.perLetter:
