@@ -34,7 +34,7 @@ ID	DIALOGUE_TEXT
 04_KOA_HAP_SEQ_21	Yup! I hope we get along, kiddo!
 04_KOA_HAP_SEQ_22	However, my name is Gus and this is my daughter, Fae.
 04_KOA_NEU_SEQ_23	Nice to meet you...?
-04_KOA_NEU_SEQ_24	$playerName, right?
+04_KOA_NEU_SEQ_24	Alex, right?
 04_KOA_HAP_SEQ_25	Sounds cool!
 04_PRO_HAP_DTR_08	Thank you!
 04_PRO_NEU_DTR_09	Yeah, whatever.
@@ -46,12 +46,12 @@ ID	DIALOGUE_TEXT
 04_KOA_ANG_SEQ_31	I try to be nice, but if you continue like this, I will stop.
 04_KOA_NEU_SEQ_32	Think about it.
 04_KOA_NEU_SEQ_33	Excuse me, but I have to take care of Fae.
-04_KOA_HAP_SEQ_34	It's been a pleasure talking to you, $playerName.
-04_KOA_NEU_SEQ_35	Have a good day, $playerName.
-05_KOA_HAP_SEQ_01	Good afternoon, $playerName!
+04_KOA_HAP_SEQ_34	It's been a pleasure talking to you, Alex.
+04_KOA_NEU_SEQ_35	Have a good day, Alex.
+05_KOA_HAP_SEQ_01	Good afternoon, Alex!
 05_KOA_NEU_SEQ_02	Maybe later you can play with Fae?
 05_KOA_HAP_SEQ_03	She needs to socialize and improve her own confidece.
-05_KOA_HAP_SEQ_04	Good afternoon, $playerName.
+05_KOA_HAP_SEQ_04	Good afternoon, Alex.
 05_KOA_NEU_SEQ_05	Try not crossing with Panda, he's irritable.
 05_KOA_NEU_SEQ_06	Hi.
 05_KOA_NEU_SEQ_07	Now I'm busy, sorry

@@ -214,8 +214,10 @@ public class DialogueQTE : DialogueBase
         }
         _actionPressed = 0;
 
+        First = null; Second = null; Third = null;
+
         //TODO: HIDE/SHOW TEXT IN A BETTER WAY
-        foreach(Transform t in DialogueRef.transform)
+        foreach (Transform t in DialogueRef.transform)
         {
             t.GetComponentInChildren<Text>().text = "";
             t.GetComponent<Image>().enabled = false;
